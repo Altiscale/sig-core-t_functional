@@ -23,6 +23,8 @@ if fasttrack:
 else:
     centos_default_repos = ['base','extras','updates','cr']
 
+centos_default_repos = ['altiscale-base', 'base', 'centosplus', 'epel', 'extras', 'updates', 'vcc-updates', 'verticloud-cust', 'verticloud-prod']
+
 now = lambda: datetime.datetime.today().strftime("%c")
 print "[+] %s -> Check if non default repo is enabled" % now() 
 for repo in yb.repos.listEnabled():
