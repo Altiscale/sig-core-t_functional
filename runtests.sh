@@ -39,7 +39,7 @@ if [ $# -gt 0 ]; then
 else
   t_Process <(/usr/bin/find ./tests/0_*/ -type f|sort -t'/' )
   #t_Process <(/usr/bin/find ./tests/p_*/ -type f|sort -t'/' )
-  t_Process <(/usr/bin/find ./tests/p_*/ -type f ! -path "./tests/p_yum/*" ! -path "./tests/p_anaconda/*" ! -path "./tests/p_centos-release/*" ! -path "./tests/p_diffutils/*" ! -path "./tests/p_iptables/*" ! -path "./tests/p_kernel/*" ! -path "./tests/p_libvirt/*" ! -path "./tests/p_only/*" ! -path "./tests/p_ruby/*" ! -path "./tests/p_yum-plugin-fastestmirror/*" |sort -t'/' )
+  t_Process <(/usr/bin/find ./tests/p_*/ -type f ! -path "./tests/p_yum/*" ! -path "./tests/p_anaconda/*" ! -path "./tests/p_centos-release/*" ! -path "./tests/p_diffutils/*" ! -path "./tests/p_iptables/*" ! -path "./tests/p_kernel/*" ! -path "./tests/p_libvirt/*" ! -path "./tests/p_only/*" ! -path "./tests/p_yum-plugin-fastestmirror/*" |sort -t'/' )
   t_Process <(/usr/bin/find ./tests/r_*/ -type f|sort -t'/' )
   t_Process <(/usr/bin/find ./tests/z_*/ -type f|sort -t'/' )
 fi
