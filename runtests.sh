@@ -3,6 +3,9 @@
 # Author: Steve Barnes (steve@echo.id.au)
 # Description: this script sources our library functions and starts a test run.
 
+dir_name=$(dirname $0)
+cd $dir_name
+
 echo -e "\n[+] `date` -> CentOS QA $0 starting."
 
 yum -d0 -y install bind-utils 

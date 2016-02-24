@@ -13,16 +13,6 @@ import os
 
 yb = yum.YumBase()
 
-try:
-    fasttrack = int(os.environ['FASTTRACK'])
-except KeyError:
-    fasttrack = 0
-
-if fasttrack:
-    centos_default_repos = ['base','extras','updates','cr','fasttrack']
-else:
-    centos_default_repos = ['base','extras','updates','cr']
-
 centos_default_repos = ['altiscale-base', 'base', 'centosplus', 'epel', 'extras', 'updates', 'vcc-updates', 'verticloud-cust', 'verticloud-prod']
 
 now = lambda: datetime.datetime.today().strftime("%c")
