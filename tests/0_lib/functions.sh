@@ -14,8 +14,10 @@ function t_CheckExitStatus
 {
 	[ $1 -eq 0 ] && { t_Log "PASS"; return $PASS; }
 
-	t_Log "FAIL"
-	exit $FAIL
+  comment=''
+  [ "$2" ] && comment=": $2"
+  t_Log "FAIL" $comment
+  exit $FAIL
 }
 
 # Description: call this to perform yum-based installs of packages
