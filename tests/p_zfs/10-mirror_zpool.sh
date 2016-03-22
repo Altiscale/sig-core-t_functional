@@ -1,8 +1,8 @@
 t_Log "Running $0 - Zpool mirror test"
 
 t_Log 'Creating a mirrored zpool'
-zpool create tank mirror /dev/sdb /dev/sdc mirror /dev/sdd /dev/sde -f
-t_CheckExitStatus $? 'Fail: Can not create a mirrored zpool'
+zpool create tank mirror sdb sdc mirror sdd sde -f
+t_CheckExitStatus $? 'Fail: Can not create striped mirrored zpools'
 
 echo 'some text in a file' >/tank/file_in_zfs
 
