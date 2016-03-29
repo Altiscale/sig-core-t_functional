@@ -2,3 +2,5 @@
 .*.swp
 .vagrant
 .vagrant/*
+virtual_disks
+virtual_disks/*
