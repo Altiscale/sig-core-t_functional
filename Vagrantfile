@@ -12,7 +12,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   ]
 
   machines.each do | machine |
-    mem = machine[:ram] || "4096"
+    mem = machine[:ram] || "2048"
     cpu = machine[:cpu] || "2"
     hname = machine[:hostname] || "#{machine[:name]}.test.altiscale.com"
     box = machine[:box]
