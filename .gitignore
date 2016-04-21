@@ -2,5 +2,7 @@
 .*.swp
 .vagrant
 .vagrant/*
-virtual_disks
-virtual_disks/*
+.virtual_disks
+.virtual_disks/*
+.prometheus_path/
+.prometheus_path/*

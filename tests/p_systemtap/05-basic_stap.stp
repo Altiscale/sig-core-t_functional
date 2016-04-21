@@ -1,0 +1,6 @@
+#! /usr/bin/env stap
+
+probe begin { 
+  printf("Probe started"); 
+  exit() 
+}
