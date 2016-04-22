@@ -7,7 +7,7 @@ Vagrant.configure(2) do |config|
     disks.each_with_index do | disk_size, index |
       disk_file = ".virtual_disks/virtual_disk#{index}.vdi"
       vb.customize ["createhd",  "--filename", disk_file, "--size", disk_size]
-      vb.customize ["createhd",  "--filename", disk_file, "--size", disk_size]
+      vb.customize ["storageattach", :id, "--storagectl", "prometheus-storage-0", "--port", index + 1, "--type", "hdd", "--medium", disk_file]
     end
   end
   config.vm.synced_folder ".", "/t_functional", type: "rsync"
