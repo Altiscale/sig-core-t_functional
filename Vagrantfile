@@ -1,6 +1,5 @@
-
 disks = [1024, 2048, 1024, 2048]
-load File.expand_path('.prometheus_path/prometheus_vagrantfile')
+load File.expand_path('.vagrant/tmp/remote_vagrantfile')
 
 Vagrant.configure(2) do |config|
   config.vm.provider :virtualbox do |vb|
