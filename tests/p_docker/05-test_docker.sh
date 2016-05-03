@@ -3,7 +3,7 @@ t_Log "Running $0 -  Check basic docker functionality"
 t_Log 'Pulling image'
 
 # Registry
-registry='registry.test.altiscale.com'
+registry='registry.test.altiscale.com:443'
 [ -z $REGISTRY ] || registry=$REGISTRY
 
 # Default image
