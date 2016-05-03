@@ -8,7 +8,7 @@ cd $dir_name
 
 echo -e "\n[+] `date` -> CentOS QA $0 starting."
 
-yum -d0 -y install bind-utils 
+yum -d0 -y install bind-utils
 
 host repo.centos.qa > /dev/null
 export SKIP_QA_HARNESS=$?
@@ -34,12 +34,13 @@ set -u
 
 # process our test scripts
 if [ $# -gt 0 ]; then
-  t_Process <(/usr/bin/find ./tests/0_*/ -type f|sort -t'/' )
+  common='0_*'
+  [[ $# == 1 || $1 == --ignore-common ]] || common='0_lib'
+  t_Process <(/usr/bin/find ./tests/$common/ -type f|sort -t'/' )
   t_Process <(/usr/bin/find ./tests/$1/ -type f|sort -t'/' )
 else
   t_Process <(/usr/bin/find ./tests/0_*/ -type f|sort -t'/' )
-  #t_Process <(/usr/bin/find ./tests/p_*/ -type f|sort -t'/' )
-  t_Process <(/usr/bin/find ./tests/p_*/ -type f ! -path "./tests/p_yum/*" ! -path "./tests/p_anaconda/*" ! -path "./tests/p_centos-release/*" ! -path "./tests/p_diffutils/*" ! -path "./tests/p_iptables/*" ! -path "./tests/p_kernel/*" ! -path "./tests/p_libvirt/*" ! -path "./tests/p_ruby/*" ! -path "./tests/p_arpwatch/*" ! -path "./tests/p_only/*" ! -path "./tests/p_yum-plugin-fastestmirror/*" ! -path "./tests/p_sendmail/*" ! -path "./tests/p_git/*" | sort -t'/' )
+  t_Process <(/usr/bin/find ./tests/p_*/ -type f| sort -t'/' )
   t_Process <(/usr/bin/find ./tests/r_*/ -type f|sort -t'/' )
   t_Process <(/usr/bin/find ./tests/z_*/ -type f|sort -t'/' )
 fi
