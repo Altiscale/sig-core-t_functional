@@ -5,10 +5,10 @@ Vagrant.configure(2) do |config|
 
   config.functional.tests = %w{
     p_docker p_zfs p_bfq p_systemtap p_bash p_collectd
-    p_abrt p_abrt-cli p_acl p_amanda p_anaconda p_arpwatch p_attr p_audit p_autofs p_bc p_bind p_bridge-utils p_busybox p_bzip2
+    p_abrt p_abrt-cli p_acl p_amanda p_arpwatch p_attr p_audit p_autofs p_bc p_bind p_bridge-utils p_busybox p_bzip2
     p_chkconfig p_coreutils p_cpio p_cracklib p_cron p_curl p_dovecot p_exim p_file p_findutils p_freeradius
     p_gcc p_grep p_grub p_grub2 p_gzip p_httpd p_initscripts p_ipa-server p_iptraf p_iputils p_jwhois
-    p_lftp p_libvirt p_logrotate p_logwatch p_lsb p_lsof p_lynx p_lzop p_mailman p_mdadm p_minicom p_mod_python p_mod_wsgi p_mtr p_mysql p_net-snmp
+    p_lftp p_logrotate p_logwatch p_lsb p_lsof p_lynx p_lzop p_mailman p_mdadm p_minicom p_mod_python p_mod_wsgi p_mtr p_mysql p_net-snmp
     p_network p_nfs p_nmap p_ntp p_openssh p_openssl p_passwd p_perl p_php p_postfix p_postgresql p_procinfo p_python p_rootfiles p_rpm p_rrdtool
     p_rsync p_ruby p_samba p_screen p_selinux p_sendmail p_setup p_shadow-utils p_shim p_spamassassin p_sqlite p_squid p_squirrelmail p_strace
     p_subversion p_syslog p_sysstat p_tar p_tcl p_tcpdump p_telnet p_tftp-server p_tmpwatch p_tomcat p_traceroute p_vconfig
