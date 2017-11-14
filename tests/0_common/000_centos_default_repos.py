@@ -13,7 +13,7 @@ import os
 
 yb = yum.YumBase()
 
-centos_default_repos = ['altiscale-base', 'base', 'centosplus', 'epel', 'extras', 'updates', 'vcc-updates', 'verticloud-cust', 'verticloud-prod']
+centos_default_repos = ['altiscale-base', 'base', 'centosplus', 'epel', 'extras', 'updates', 'vcc-updates', 'verticloud-cust', 'verticloud-prod', 'altiscale-cust','altiscale-prod', 'scl', 'sclo', 'sclo-rh']
 
 now = lambda: datetime.datetime.today().strftime("%c")
 print "[+] %s -> Check if non default repo is enabled" % now() 
