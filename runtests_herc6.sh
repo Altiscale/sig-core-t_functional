@@ -17,6 +17,7 @@ for f in ${skip_suits[@]}; do
     chmod a-x ./tests/${f}/*
 done
 
-SKIP_QA_HARNESS=1 ${SUDO} ./runtests.sh
+export SKIP_QA_HARNESS=1
+${SUDO} ./runtests.sh
 
 exit 0
